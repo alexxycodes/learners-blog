@@ -1,0 +1,271 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+html, 
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+/*=======================
+        TYPOLOGY
+========================*/
+ h3, i{
+     /* margin: 0; */
+     font-size: .9rem; 
+}
+nav{
+    /* padding: 0; */
+}
+ul {
+    list-style: none;
+    margin: 0;
+}
+li {
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    margin: 0;
+}
+.top-date {
+    font-size: 0.6rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.top-header {
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+.top-paragraph {
+    font-size: 1rem;
+}
+/*=======================
+        link
+========================*/
+
+ul a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.849);
+}
+li:hover {
+    transform: scale(1.2);
+    transition: .25s;
+}
+button:hover {
+    transform: scale(.8);
+    transition: .25s;
+}
+
+
+/*=======================
+        Layout
+========================*/
+.main-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 1;
+    padding: 0 1em 0;
+}
+
+
+.blog {
+    display: grid;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    grid-template-columns: 1em minmax(70px, 1fr) 1em;
+    align-items: stretch;
+    grid-template-areas: 
+        ".. jy .."
+        ".. je .."
+        ".. my .."
+        ".. al .."
+        ".. mh .."
+        ".. fb .."
+        ".. jn .."
+        ".. dc .."
+        ".. nv .."
+        ".. ot .."
+        /* ".. .. .."; */
+    
+}
+i{
+    margin-right: .2em;
+}
+article{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.flex{
+    display: flex;
+    
+}
+.main-header {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+ul {
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+}
+.top-sect{
+    position: relative;
+    flex-wrap: wrap;
+}
+.top-sect a {
+    width: 100%;
+}
+.top-sect a img {
+    max-height: 400px;
+}
+
+.top-div {
+    position: absolute;
+    flex-direction: column;
+    bottom: .5%;
+    left: 4%;
+    align-items: flex-start;
+    color: white;
+    text-shadow: 1px 1px 2px rgb(196, 49, 24);
+}
+.invicible{
+    display: none;
+}
+
+img {
+    width: 100%;
+}
+.expand{
+    margin:0 1em 1em;
+    padding: .5em 1em;
+    border: none;
+    background-color: gray;
+}
+
+.july{
+    grid-area: jy;
+}
+
+.june{
+    grid-area: je;
+}
+
+.may{
+    grid-area: my;
+}
+
+.april{
+    grid-area: al;
+}
+.march {
+    grid-area: mh;
+}
+.feb{
+    grid-area: fb;
+}
+.jan{
+    grid-area: jn;
+}
+.dec{
+    grid-area: dc;
+}
+.nov{
+    grid-area: nv;
+}
+.oct{
+    grid-area: ot;
+}
+
+@media(min-width: 526px) {
+    .blog {
+        display: grid;
+        margin-top: 1em;
+        column-gap:1em;
+        grid-template-columns: .1em 1fr 1fr .1em;
+        grid-template-areas: 
+            ".. jy je .."
+            ".. my al .."
+            ".. mh fb .."
+            ".. jn dc .."
+            ".. nv ot ..";
+    }
+    
+    h3, i{
+        font-size: .9rem; 
+   }
+   ul {
+       list-style: none;
+       margin: 0;
+   }
+   li {
+       text-transform: uppercase;
+       font-size: 0.7rem;
+       margin: 0;
+   }
+   .top-date {
+       font-size: 1rem;
+       letter-spacing: 1px;
+       text-transform: uppercase;
+   }
+   .top-header {
+       font-weight: 700;
+       font-size: 1.5rem;
+   }
+   .top-paragraph {
+       font-size: 1.2rem;
+   }
+}
+@media(min-width: 1000px) {
+    .blog {
+        display: grid;
+        margin-top: 1em;
+        /* gap:0.5em, 0.5em; */
+        column-gap: 0.5em;
+        row-gap: 0.5em;
+        grid-template-columns: 1em 1fr 1fr 1fr 1em;
+        grid-auto-rows: auto;
+        align-items: stretch;
+        grid-template-areas: 
+            ".. jy je my .."
+            ".. al mh fb .."
+            ".. jn dc nv .."
+            ".. .. ot .. ..";
+    }
+   
+    /* .april{
+        align-self: center;
+    } */
+    h3, i{
+        font-size: 1.1rem; 
+   }
+  
+   ul {
+       list-style: none;
+       margin: 0;
+   }
+   li {
+       text-transform: uppercase;
+       font-size: 0.7rem;
+       margin: 0;
+   }
+   .top-date {
+       font-size: 1rem;
+       letter-spacing: 1px;
+       text-transform: uppercase;
+   }
+   .top-header {
+       font-weight: 900;
+       font-size: 2rem;
+   }
+   .top-paragraph {
+       font-size: 1.5rem;
+   }
+   img:not(.top-date img){
+    /* height: 60%; */
+   }
+}
