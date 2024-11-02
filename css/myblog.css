@@ -160,10 +160,10 @@ img {
     width: 100%;
 }
 .expand{
-    margin:0 1em 1em;
+    display: inline-block;
+    margin-bottom:1em;
     padding: .5em 1em;
-    border: none;
-    background-color: gray;
+    text-decoration-line: none;
 }
 
 .july{
